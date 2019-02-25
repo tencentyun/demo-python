@@ -2,7 +2,7 @@ Resources:
     hello_world:
         Type: 'TencentCloud::Scf::Function'
         Properties:
-            Handler: main.main_handler
+            Handler: index.main_handler
             {%- if cookiecutter.runtime == 'python2.7' %}
             Runtime: Python2.7
             {%- elif cookiecutter.runtime == 'python3.6' %}
@@ -17,7 +17,7 @@ Resources:
                 ENV_FIRST: env1
                 ENV_SECOND: env2
             MemorySize: 128
-            Timeout: 5
+            Timeout: 3
 Globals:
   Function:
     Timeout: 10
